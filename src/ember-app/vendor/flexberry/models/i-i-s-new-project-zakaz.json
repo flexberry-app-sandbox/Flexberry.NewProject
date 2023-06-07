@@ -1,0 +1,169 @@
+﻿{
+  "name": "IISNewProjectZakaz",
+  "modelName": "i-i-s-new-project-zakaz",
+  "className": "Zakaz",
+  "nameSpace": "IIS.NewProject",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "status",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "client",
+      "relatedTo": "i-i-s-new-project-client",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": false,
+      "name": "coupon",
+      "relatedTo": "i-i-s-new-project-coupon",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "orderProduct",
+      "relatedTo": "i-i-s-new-project-order-product",
+      "inverse": "zakaz"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ZakazE",
+      "modelName": "i-i-s-new-project-zakaz",
+      "attrs": [
+        {
+          "name": "status",
+          "caption": "Статус",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "ProductName",
+          "lookupValueField": "productName",
+          "relationName": "Coupon",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "productName",
+              "caption": "Купон",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "type": "standard",
+          "caption": "Купон",
+          "name": "coupon",
+          "relatedTo": "i-i-s-new-project-coupon",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Login",
+          "lookupValueField": "login",
+          "relationName": "Client",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "login",
+              "caption": "Клиент",
+              "hidden": true,
+              "index": 4
+            }
+          ],
+          "index": 3,
+          "type": "standard",
+          "caption": "Клиент",
+          "name": "client",
+          "relatedTo": "i-i-s-new-project-client",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "OrderProductE",
+          "caption": "Товарная продукция",
+          "name": "orderProduct",
+          "relatedTo": "i-i-s-new-project-order-product",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ZakazL",
+      "modelName": "i-i-s-new-project-zakaz",
+      "attrs": [
+        {
+          "name": "status",
+          "caption": "Статус",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Coupon",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "productName",
+              "caption": "Купон",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Купон",
+          "name": "coupon",
+          "relatedTo": "i-i-s-new-project-coupon",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Client",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "login",
+              "caption": "Клиент",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Клиент",
+          "name": "client",
+          "relatedTo": "i-i-s-new-project-client",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

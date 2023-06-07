@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Клиенты",
+  "name": "IISNewProjectClientE",
+  "className": "ClientE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-new-project-client",
+      "modelProjection": "ClientE"
+    }
+  ]
+}

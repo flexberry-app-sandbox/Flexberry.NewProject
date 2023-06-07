@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-new-project-zakaz-e",
+  "editForm": "i-i-s-new-project-zakaz-e",
+  "external": false,
+  "caption": "Заказы",
+  "name": "IISNewProjectZakazL",
+  "className": "ZakazL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-new-project-zakaz",
+      "modelProjection": "ZakazL"
+    }
+  ]
+}

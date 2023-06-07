@@ -1,0 +1,75 @@
+﻿{
+  "name": "IISNewProjectClient",
+  "modelName": "i-i-s-new-project-client",
+  "className": "Client",
+  "nameSpace": "IIS.NewProject",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "login",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "password",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ClientE",
+      "modelName": "i-i-s-new-project-client",
+      "attrs": [
+        {
+          "name": "login",
+          "caption": "Логин",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "password",
+          "caption": "Пароль",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ClientL",
+      "modelName": "i-i-s-new-project-client",
+      "attrs": [
+        {
+          "name": "login",
+          "caption": "Логин",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "password",
+          "caption": "Пароль",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

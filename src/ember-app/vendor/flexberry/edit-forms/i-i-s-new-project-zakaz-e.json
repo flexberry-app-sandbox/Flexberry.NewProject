@@ -1,0 +1,39 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Coupon",
+      "projection": "CouponL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Client",
+      "projection": "ClientL",
+      "detailModelName": null
+    },
+    {
+      "master": "product",
+      "displayAttributeName": "name",
+      "required": true,
+      "relationName": "OrderProduct.Product",
+      "projection": "ProductL",
+      "detailModelName": "i-i-s-new-project-order-product"
+    }
+  ],
+  "external": false,
+  "caption": "Заказы",
+  "name": "IISNewProjectZakazE",
+  "className": "ZakazE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-new-project-zakaz",
+      "modelProjection": "ZakazE"
+    }
+  ]
+}

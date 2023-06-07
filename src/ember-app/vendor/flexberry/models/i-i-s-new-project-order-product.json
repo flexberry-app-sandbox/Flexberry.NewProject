@@ -1,0 +1,77 @@
+﻿{
+  "name": "IISNewProjectOrderProduct",
+  "modelName": "i-i-s-new-project-order-product",
+  "className": "OrderProduct",
+  "nameSpace": "IIS.NewProject",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "amount",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "product",
+      "relatedTo": "i-i-s-new-project-product",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "zakaz",
+      "relatedTo": "i-i-s-new-project-zakaz",
+      "inverse": "orderProduct"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "OrderProductE",
+      "modelName": "i-i-s-new-project-order-product",
+      "attrs": [
+        {
+          "name": "amount",
+          "caption": "Количество",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "Product",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Товар",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "type": "standard",
+          "caption": "Товар",
+          "name": "product",
+          "relatedTo": "i-i-s-new-project-product",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

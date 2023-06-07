@@ -1,0 +1,75 @@
+﻿{
+  "name": "IISNewProjectCoupon",
+  "modelName": "i-i-s-new-project-coupon",
+  "className": "Coupon",
+  "nameSpace": "IIS.NewProject",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "percent",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "productName",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "CouponE",
+      "modelName": "i-i-s-new-project-coupon",
+      "attrs": [
+        {
+          "name": "productName",
+          "caption": "Название товара",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "percent",
+          "caption": "Процент",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "CouponL",
+      "modelName": "i-i-s-new-project-coupon",
+      "attrs": [
+        {
+          "name": "productName",
+          "caption": "Название товара",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "percent",
+          "caption": "Процент",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

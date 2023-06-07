@@ -1,0 +1,43 @@
+﻿{
+  "applicationCaption": "New project",
+  "applicationTitle": "New project",
+  "items": [
+    {
+      "link": null,
+      "menuName": "clothes",
+      "caption": "Clothes",
+      "title": "Clothes",
+      "children": [
+        {
+          "link": "i-i-s-new-project-coupon-l",
+          "menuName": null,
+          "caption": "Купоны",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-new-project-client-l",
+          "menuName": null,
+          "caption": "Клиенты",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-new-project-zakaz-l",
+          "menuName": null,
+          "caption": "Заказы",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-new-project-product-l",
+          "menuName": null,
+          "caption": "Товары",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}
